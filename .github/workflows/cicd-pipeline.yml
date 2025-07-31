@@ -48,7 +48,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     # This step uses a multi-stage Dockerfile to build a lean, optimized Docker image.
     - name: Build and push Docker image
