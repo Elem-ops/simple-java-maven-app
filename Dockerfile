@@ -14,8 +14,8 @@ COPY src ./src
 # Compile and package the application into a JAR file.
 RUN mvn package -DskipTests
 
-# Use lightweight OpenJDK image for the final image to reduce its size.
-FROM openjdk:21-jre-slim
+# Use lightweight image for the final image.
+FROM eclipse-temurin:21-jre-ubi9-minimal
 
 WORKDIR /app
 
